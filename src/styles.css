@@ -47,6 +47,11 @@
     padding: 6px 8px;
     cursor: pointer;
     font-size: 18px;
+    transition: box-shadow .2s ease-in-out;
+}
+
+.form-cant > button:hover, .form-cargar > button:hover {
+    box-shadow: 0px 2px 4px 2px #ccc;
 }
 
 .form-cant > label > h3 {
