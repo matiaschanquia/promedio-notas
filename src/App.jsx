@@ -33,9 +33,6 @@ function App() {
             let promedio = suma / notas.length;
             promedio = promedio.toFixed(2);
             promedio = parseFloat(promedio)
-            console.log(promedio);
-            console.log(typeof promedio);
-            console.log(resultado);
             setResultado(promedio);
         }
     }, [notas]);
