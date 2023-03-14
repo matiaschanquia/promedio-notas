@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import CantidadNotas from "./components/CantidadNotas";
 import CargarNotas from "./components/CargarNotas";
 import Resultado from "./components/Resultado";
+import logo from "./assets/logo-big.png";
 
 function App() {
     const [cantNotas, setCantNotas] = useState(0);
@@ -39,7 +40,7 @@ function App() {
 
     return (
         <div className="container-app">
-            <h1 className="titulo">Promedio de notas</h1>
+            <h1 className="titulo"><img src={logo} alt="anotador"/> Promedio de notas</h1>
             <div className="container-cargar-resultado">
                 {cantNotas === 0 ? (
                     <CantidadNotas changeCantNotas={changeCantNotas} />
