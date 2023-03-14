@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const CantidadNotas = ({ changeCantNotas }) => {
     const [cantNotas, setCantNotas] = useState(1);
+
+    const inputRef = useRef();
 
     const handleCantNotas = (e) => {
         setCantNotas(e.target.value);
@@ -15,6 +17,10 @@ const CantidadNotas = ({ changeCantNotas }) => {
 
         changeCantNotas(valor);
     };
+    
+    useEffect(() => {
+        inputRef.current.focus();
+    }, [])
 
     return (
         <div className="container-cant-notas">
@@ -23,6 +29,7 @@ const CantidadNotas = ({ changeCantNotas }) => {
                     <h3>Ingrese la cantidad de notas:</h3>
                 </label>
                 <input
+                    ref={inputRef}
                     type="number"
                     min={1}
                     required
